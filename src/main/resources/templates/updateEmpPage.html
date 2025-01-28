@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>update Employee Here</h1>
+	<form th:action="@{/updated/{id}(id=${upemp.empId})}"
+		th:object=${upemp} method="post">
+		<label>Name</label><br> <input type="text" th:field=*{name}><br>
+		<label>Position</label><br> <input type="text"
+			th:field=*{position}><br> <label>Department</label><br>
+		<input type="text" th:field=*{department}><br> <label>Salary</label><br>
+		<input type="number" th:field=*{salary}><br>
+
+		<button type="submit">Save</button>
+	</form>
+</body>
+</html>
